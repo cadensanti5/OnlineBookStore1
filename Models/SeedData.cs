@@ -30,7 +30,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Signet",
                     ISBN = "978-0451419439",
                     ClassCategory = "Fiction, Classic",
-                    Price = 9.95
+                    Price = 9.95,
+                    Pages = 1488
                 },
 
                 new Books
@@ -40,7 +41,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Simon & Schuster",
                     ISBN = "978-0743270755",
                     ClassCategory = "Non-Fiction, Biography",
-                    Price = 14.58
+                    Price = 14.58,
+                    Pages = 944
                 },
 
                 new Books
@@ -50,7 +52,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Bantam",
                     ISBN = "978-0553384611",
                     ClassCategory = "Non-Fiction, Biography",
-                    Price = 21.54
+                    Price = 21.54,
+                    Pages = 832
                 },
 
                 new Books
@@ -60,7 +63,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Random House",
                     ISBN = "978-0812981254",
                     ClassCategory = "Non-Fiction, Biography",
-                    Price = 11.61
+                    Price = 11.61,
+                    Pages = 864
                 },
 
                 new Books
@@ -70,7 +74,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Random House",
                     ISBN = "978-0812974492",
                     ClassCategory = "Non-Fiction, Historical",
-                    Price = 13.33
+                    Price = 13.33,
+                    Pages = 528
                 },
 
                 new Books
@@ -80,7 +85,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Vintage",
                     ISBN = "978-0804171281",
                     ClassCategory = "Fiction, Historical Fiction",
-                    Price = 15.95
+                    Price = 15.95,
+                    Pages = 288
                 },
 
                 new Books
@@ -90,7 +96,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Grand Central Publishing",
                     ISBN = "978-1455586691",
                     ClassCategory = "Non-Fiction, Self-Help ",
-                    Price = 14.99
+                    Price = 14.99,
+                    Pages = 304
                 },
 
                 new Books
@@ -100,7 +107,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Grand Central Publishing",
                     ISBN = "978-1455523023",
                     ClassCategory = "Non-Fiction, Self-Help",
-                    Price = 21.66
+                    Price = 21.66,
+                    Pages = 240
                 },
 
                 new Books
@@ -110,7 +118,8 @@ namespace OnlineBookStore.Models
                     Publisher = "Portfolio",
                     ISBN = "978-1591847984",
                     ClassCategory = "Non-Fiction, Business",
-                    Price = 29.16
+                    Price = 29.16,
+                    Pages = 400
                 },
 
                 new Books
@@ -120,7 +129,41 @@ namespace OnlineBookStore.Models
                     Publisher = "Bantam",
                     ISBN = "978-0553393613",
                     ClassCategory = "Fiction, Thrillers",
-                    Price = 15.03
+                    Price = 15.03,
+                    Pages = 642
+                },
+
+                new Books
+                {
+                    Title = "Fabelhaven",
+                    Author = "Brandon Mull",
+                    Publisher = "Deseret Book Company",
+                    ISBN = "978-1442032699",
+                    ClassCategory = "Fantasy Fiction",
+                    Price = 19.99,
+                    Pages = 368
+                },
+
+                new Books
+                {
+                    Title = "How to Win Friends and Influence People",
+                    Author = "Dale Carnegie",
+                    Publisher = "Simon & Schuster",
+                    ISBN = "978-1442344815",
+                    ClassCategory = "Self-Help",
+                    Price = 11.85,
+                    Pages = 291
+                },
+
+                new Books
+                {
+                    Title = "Can't Hurt Me",
+                    Author = "David Goggins",
+                    Publisher = "Lioncrest",
+                    ISBN = "978-1544507859",
+                    ClassCategory = "Self-Help",
+                    Price = 7.99,
+                    Pages = 364
                 }
 
                 );

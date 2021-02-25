@@ -2,20 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model IQueryable<Books>
+@model ProjectListViewModel
 
-<header class="bg-primary text-white text-center">
-    <h1>Online Book Store</h1>
-</header>
-
-@foreach (var x in Model)
+@foreach (var x in Model.Books)
 {
-<div class="border border-4" style="width: 200px;">
+<div class="border border-4 rounded" style="width: 200px;">
     <h4 class="font-italic">@x.Title</h4>
     <p class="font-weight-bold">@x.Author</p>
-    <p>@x.Publisher</p>
-    <p>@x.ISBN</p>
-    <p>@x.ClassCategory</p>
+    <span class="badge badge-pill badge-dark">
+        <p>Genre: @x.ClassCategory</p>
+    </span>
+    <p>Publisher: @x.Publisher</p>
+    <p>ISBN: @x.ISBN</p>
+    <p>Pages: @x.Pages</p>
     <p class="text-success">$@x.Price</p>
 </div>
 }
+
+<!--Dynamically create the page numbeers based on how many books there and how many books for each page-->
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
+     page-class-normal="btn-outline-dark" page-class-selected="btn-primary"
+     class="btn-group pull-right m-1"></div>

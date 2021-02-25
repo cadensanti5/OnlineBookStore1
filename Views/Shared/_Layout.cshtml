@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+
+    <div class="bg-primary text-white p-2">
+        <span class="navbar-brand ml-2">Online Book Store</span>
     </div>
+    <div class="row m-1 p-1">
+        <div class="col-4">
+            <h2 data-mdb-toggle="tooltip" data-mdb-placement="top" title="We Love to Read!">Book List:</h2>
+        </div>
+        <div class="col-8">
+            @RenderBody()
+        </div>
+    </div>    
+
 </body>
 </html>

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using OnlineBookStore.Models.ViewModels;
+
 
 namespace OnlineBookStore.Controllers
 {
@@ -15,15 +17,32 @@ namespace OnlineBookStore.Controllers
 
         private IBookRepository _repository;
 
+        //make variable for how many items you want to show per page
+        public int PageSize = 5;
+
         public HomeController(ILogger<HomeController> logger, IBookRepository repository)
         {
             _logger = logger;
             _repository = repository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            return View(_repository.Books);
+            //put in parameters of what you want to view
+            return View(new ProjectListViewModel
+            {
+                Books = _repository.Books
+                    .OrderBy(p => p.BookId)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize)
+                ,
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repository.Books.Count()
+                }
+            });               
         }
 
         public IActionResult Privacy()
