@@ -25,13 +25,15 @@ namespace OnlineBookStore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews();         //allows us to create our own endpoint by using controllers and views.
 
             services.AddDbContext<ProjectDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:BookStoreConnection"]);
             });
 
+            //When we register a type as Scoped, one instance is available throughout the application per request. 
+            //When a new request comes in, the new instance is created. Add scoped specifies that a single object is available per request.
             services.AddScoped<IBookRepository, EFBookRepository>();
         }
 
@@ -57,6 +59,19 @@ namespace OnlineBookStore
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("page",
+                    "{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("category",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1 });
+
                 endpoints.MapControllerRoute(
                     "pagination",
                     "P{page}",

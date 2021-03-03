@@ -1,0 +1,14 @@
+﻿@model Books
+
+<!--Making the Partial View-->
+<div class="border border-4 rounded" style="width: 200px;">
+    <h4 class="font-italic">@Model.Title</h4>
+    <p class="font-weight-bold">@Model.AuthorFirstName @Model.AuthorLastName</p>
+    <span class="badge badge-pill badge-dark">
+        <p>Class: @Model.Class <br /> Category: @Model.Category</p>
+    </span>
+    <p>Publisher: @Model.Publisher</p>
+    <p>ISBN: @Model.ISBN</p>
+    <p>Pages: @Model.Pages</p>
+    <p class="text-success">$@Model.Price</p>
+</div>

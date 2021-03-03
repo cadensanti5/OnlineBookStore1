@@ -15,8 +15,10 @@ namespace OnlineBookStore.Models
         public string Title { get; set; }
 
         [Required]
-        public string Author { get; set; }
+        public string AuthorFirstName { get; set; }
 
+        [Required]
+        public string AuthorLastName { get; set; }
         [Required]
         public string Publisher { get; set; }
 
@@ -25,7 +27,10 @@ namespace OnlineBookStore.Models
         public string ISBN { get; set; }
 
         [Required]
-        public string ClassCategory { get; set; }
+        public string Class { get; set; }
+
+        [Required]
+        public string Category { get; set; }
 
         [Required]
         public double Price { get; set; }

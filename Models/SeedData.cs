@@ -26,10 +26,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "Les Miserables",
-                    Author = "Victor Hugo",
+                    AuthorFirstName = "Victor",
+                    AuthorLastName = "Hugo",
                     Publisher = "Signet",
                     ISBN = "978-0451419439",
-                    ClassCategory = "Fiction, Classic",
+                    Class = "Fiction",
+                    Category = "Classic",
                     Price = 9.95,
                     Pages = 1488
                 },
@@ -37,10 +39,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "Team of Rivals",
-                    Author = "Doris Kearns Goodwin",
+                    AuthorFirstName = "Doris Kearns",
+                    AuthorLastName = "Goodwin",
                     Publisher = "Simon & Schuster",
                     ISBN = "978-0743270755",
-                    ClassCategory = "Non-Fiction, Biography",
+                    Class = "Non-Fiction",
+                    Category = "Biography",
                     Price = 14.58,
                     Pages = 944
                 },
@@ -48,10 +52,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "The Snowball",
-                    Author = "Alice Schroeder",
+                    AuthorFirstName = "Alice",
+                    AuthorLastName = "Schroeder",
                     Publisher = "Bantam",
                     ISBN = "978-0553384611",
-                    ClassCategory = "Non-Fiction, Biography",
+                    Class = "Non-Fiction",
+                    Category = "Biography",
                     Price = 21.54,
                     Pages = 832
                 },
@@ -59,10 +65,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "American Ulysses",
-                    Author = "Ronald C. White",
+                    AuthorFirstName = "Ronald C.",
+                    AuthorLastName = "White",
                     Publisher = "Random House",
                     ISBN = "978-0812981254",
-                    ClassCategory = "Non-Fiction, Biography",
+                    Class = "Non-Fiction",
+                    Category = "Biography",
                     Price = 11.61,
                     Pages = 864
                 },
@@ -70,10 +78,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "Unbroken",
-                    Author = "Laura Hillenbrand",
+                    AuthorFirstName = "Laura",
+                    AuthorLastName = "Hillenbrand",
                     Publisher = "Random House",
                     ISBN = "978-0812974492",
-                    ClassCategory = "Non-Fiction, Historical",
+                    Class = "Non-Fiction",
+                    Category = "Historical",
                     Price = 13.33,
                     Pages = 528
                 },
@@ -81,10 +91,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "The Great Train Robbery",
-                    Author = "Michael Crichton",
+                    AuthorFirstName = "Michael",
+                    AuthorLastName = "Crichton",
                     Publisher = "Vintage",
                     ISBN = "978-0804171281",
-                    ClassCategory = "Fiction, Historical Fiction",
+                    Class = "Fiction",
+                    Category = "Historical Fiction",
                     Price = 15.95,
                     Pages = 288
                 },
@@ -92,10 +104,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "Deep Work",
-                    Author = "Cal Newport",
+                    AuthorFirstName = "Cal",
+                    AuthorLastName = "Newport",
                     Publisher = "Grand Central Publishing",
                     ISBN = "978-1455586691",
-                    ClassCategory = "Non-Fiction, Self-Help ",
+                    Class = "Non-Fiction",
+                    Category = "Self-Help",
                     Price = 14.99,
                     Pages = 304
                 },
@@ -103,10 +117,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "It's Your Ship",
-                    Author = "Michael Abrashoff",
+                    AuthorFirstName = "Michael",
+                    AuthorLastName = "Abrashoff",
                     Publisher = "Grand Central Publishing",
                     ISBN = "978-1455523023",
-                    ClassCategory = "Non-Fiction, Self-Help",
+                    Class = "Non-Fiction",
+                    Category = "Self-Help",
                     Price = 21.66,
                     Pages = 240
                 },
@@ -114,10 +130,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "The Virgin Way",
-                    Author = "Richard Branson",
+                    AuthorFirstName = "Richard",
+                    AuthorLastName = "Branson",
                     Publisher = "Portfolio",
                     ISBN = "978-1591847984",
-                    ClassCategory = "Non-Fiction, Business",
+                    Class = "Non-Fiction",
+                    Category = "Business",
                     Price = 29.16,
                     Pages = 400
                 },
@@ -125,10 +143,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "Sycamore Row",
-                    Author = "John Grisham",
+                    AuthorFirstName = "John",
+                    AuthorLastName = "Grisham",
                     Publisher = "Bantam",
                     ISBN = "978-0553393613",
-                    ClassCategory = "Fiction, Thrillers",
+                    Class = "Fiction",
+                    Category = "Thrillers",
                     Price = 15.03,
                     Pages = 642
                 },
@@ -136,10 +156,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "Fabelhaven",
-                    Author = "Brandon Mull",
+                    AuthorFirstName = "Brandon",
+                    AuthorLastName = "Mull",
                     Publisher = "Deseret Book Company",
                     ISBN = "978-1442032699",
-                    ClassCategory = "Fantasy Fiction",
+                    Class = "Fantasy",
+                    Category = "Fiction",
                     Price = 19.99,
                     Pages = 368
                 },
@@ -147,10 +169,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "How to Win Friends and Influence People",
-                    Author = "Dale Carnegie",
+                    AuthorFirstName = "Dale",
+                    AuthorLastName = "Carnegie",
                     Publisher = "Simon & Schuster",
                     ISBN = "978-1442344815",
-                    ClassCategory = "Self-Help",
+                    Class = "Self-Help",
+                    Category = "Self-Help",
                     Price = 11.85,
                     Pages = 291
                 },
@@ -158,10 +182,12 @@ namespace OnlineBookStore.Models
                 new Books
                 {
                     Title = "Can't Hurt Me",
-                    Author = "David Goggins",
+                    AuthorFirstName = "David",
+                    AuthorLastName = "Goggins",
                     Publisher = "Lioncrest",
                     ISBN = "978-1544507859",
-                    ClassCategory = "Self-Help",
+                    Class = "Self-Help",
+                    Category = "Self-Help",
                     Price = 7.99,
                     Pages = 364
                 }

@@ -29,6 +29,10 @@ namespace OnlineBookStore.Infrastructure
         public PagingInfo PageModel { get; set; }
         public string PageAction { get; set; }
 
+        //set up dictionary to make a key with an object that is assigned to that key
+        [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
+        public Dictionary<string, object> PageUrlValues { get; set; } = new Dictionary<string, object>();
+
         //page classes for bootstrap
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; }
@@ -40,14 +44,20 @@ namespace OnlineBookStore.Infrastructure
         {
             IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
 
+            //tagBuilder = dynamically building html tags through C3
             TagBuilder result = new TagBuilder("div");
 
             //for loop. PageModel from above and TotalPages that we built in PagingInfo.cs
+            //building the navidations and tags
             for (int i = 1; i <= PageModel.TotalPages; i++)
             {
                 //Buildilng the tags
                 TagBuilder tag = new TagBuilder("a");
-                tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i });
+
+                PageUrlValues["page"] = i;
+
+                //attached the url values dictionary
+                tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
 
                 if (PageClassesEnabled)
                 {
@@ -57,7 +67,6 @@ namespace OnlineBookStore.Infrastructure
                 }
 
                 tag.InnerHtml.Append(i.ToString());
-
                 result.InnerHtml.AppendHtml(tag);
             }
 
