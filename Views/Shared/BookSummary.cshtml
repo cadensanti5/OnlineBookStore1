@@ -1,14 +1,29 @@
 ﻿@model Books
 
 <!--Making the Partial View-->
-<div class="border border-4 rounded" style="width: 200px;">
-    <h4 class="font-italic">@Model.Title</h4>
-    <p class="font-weight-bold">@Model.AuthorFirstName @Model.AuthorLastName</p>
-    <span class="badge badge-pill badge-dark">
-        <p>Class: @Model.Class <br /> Category: @Model.Category</p>
-    </span>
-    <p>Publisher: @Model.Publisher</p>
-    <p>ISBN: @Model.ISBN</p>
-    <p>Pages: @Model.Pages</p>
-    <p class="text-success">$@Model.Price</p>
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4 class="font-italic">@Model.Title</h4>
+        <p class="font-weight-bold">@Model.AuthorFirstName @Model.AuthorLastName</p>
+        <span class="badge badge-pill badge-dark">
+            <p>Class: @Model.Class <br /> Category: @Model.Category</p>
+        </span>
+        <p>Publisher: @Model.Publisher</p>
+        <p>ISBN: @Model.ISBN</p>
+        <p>Pages: @Model.Pages</p>
+        <p class="text-success">$@Model.Price</p>
+    </div>
+
+    @*Create the "add to cart" button*@
+    <form id="@Model.BookId" asp-page="/Purchase" method="post">
+        <input type="hidden" asp-for="BookId" />
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <span class="card-text p-1">
+            @Model.Title
+            <button type="submit" class="btn-success btn-sm pull-right" style="float:right">
+                Add to Cart
+            </button>
+        </span>
+    </form>
+
 </div>

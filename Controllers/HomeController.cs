@@ -26,7 +26,7 @@ namespace OnlineBookStore.Controllers
             _repository = repository;
         }
 
-        public IActionResult Index(string category, int page = 1)
+        public IActionResult Index(string category, int pageNum = 1)
         {
             //put in parameters of what you want to view
             return View(new ProjectListViewModel
@@ -36,10 +36,10 @@ namespace OnlineBookStore.Controllers
                     //where statement is filtering by category
                     .Where(p => category == null || p.Category == category)
                     .OrderBy(p => p.BookId)
-                    .Skip((page - 1) * PageSize)
+                    .Skip((pageNum - 1) * PageSize)
                     .Take(PageSize),
                 PagingInfo = new PagingInfo { 
-                    CurrentPage = page,
+                    CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
                     TotalNumItems = category == null ?  _repository.Books.Count() :
                         _repository.Books.Where(x => x.Category == category).Count()

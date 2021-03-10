@@ -54,7 +54,7 @@ namespace OnlineBookStore.Infrastructure
                 //Buildilng the tags
                 TagBuilder tag = new TagBuilder("a");
 
-                PageUrlValues["page"] = i;
+                PageUrlValues["pageNum"] = i;
 
                 //attached the url values dictionary
                 tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
